@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FuelPoint x CodeStitch - Stress test homepage replica" />
+    <title>FuelPoint - GPL, energia pulita che arriva ovunque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- 01 - NAVIGATION | CS: Navigation + Dropdown -->
+    <header id="cs-navigation">
+      <div class="cs-container">
+
+        <!-- Logo -->
+        <a href="/" class="cs-logo" aria-label="FuelPoint - torna alla homepage">
+          <img
+            src="/src/assets/icons/logo.svg"
+            alt="FuelPoint"
+            width="140"
+            height="40"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <!-- Nav principale -->
+        <nav class="cs-nav" role="navigation" aria-label="Navigazione principale">
+
+          <!-- Hamburger mobile -->
+          <button
+            class="cs-toggle"
+            id="cs-toggle"
+            aria-label="Apri menu di navigazione"
+            aria-expanded="false"
+            aria-controls="cs-expanded"
+          >
+            <div class="cs-box" aria-hidden="true">
+              <span class="cs-line cs-line1"></span>
+              <span class="cs-line cs-line2"></span>
+              <span class="cs-line cs-line3"></span>
+            </div>
+          </button>
+
+          <!-- Nav list -->
+          <div class="cs-ul-wrapper">
+            <ul id="cs-expanded" class="cs-ul" aria-expanded="false" role="list">
+
+              <li class="cs-li cs-dropdown">
+                <button class="cs-li-link cs-dropdown-button" aria-expanded="false" aria-haspopup="true">
+                  GPL Combustibili
+                  <span class="cs-drop-icon" aria-hidden="true"></span>
+                </button>
+                <ul class="cs-drop-ul" role="list">
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">Privati e famiglie</a></li>
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">Professionisti</a></li>
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">Distributori GPL</a></li>
+                </ul>
+              </li>
+
+              <li class="cs-li cs-dropdown">
+                <button class="cs-li-link cs-dropdown-button" aria-expanded="false" aria-haspopup="true">
+                  Carburanti
+                  <span class="cs-drop-icon" aria-hidden="true"></span>
+                </button>
+                <ul class="cs-drop-ul" role="list">
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">Stazioni di servizio</a></li>
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">Flotte aziendali</a></li>
+                </ul>
+              </li>
+
+              <li class="cs-li cs-dropdown">
+                <button class="cs-li-link cs-dropdown-button" aria-expanded="false" aria-haspopup="true">
+                  Aziende
+                  <span class="cs-drop-icon" aria-hidden="true"></span>
+                </button>
+                <ul class="cs-drop-ul" role="list">
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">Soluzioni GPL</a></li>
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">BBox energia</a></li>
+                  <li class="cs-drop-li"><a href="#" class="cs-drop-link">Offerte aziendali</a></li>
+                </ul>
+              </li>
+
+              <li class="cs-li">
+                <a href="#" class="cs-li-link">Chi siamo</a>
+              </li>
+
+              <li class="cs-li">
+                <a href="#news" class="cs-li-link">News</a>
+              </li>
+
+              <!-- CTA solo mobile (desktop: vedi .cs-header-cta) -->
+              <li class="cs-li cs-mobile-cta">
+                <a href="#assistenza" class="cs-button-solid">Trova stazione</a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+        <!-- CTA header — visibile solo desktop -->
+        <div class="cs-header-cta" aria-label="Azioni rapide">
+          <a href="#assistenza" class="cs-header-link">Richiedi assistenza</a>
+          <a href="#card-features" class="cs-button-solid cs-nav-button">Trova stazione</a>
+        </div>
+
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- 02 - HERO | CS: Hero Section -> Left Aligned -->
+      <section id="cs-hero-571">
+        <div class="cs-container">
+          <div class="cs-flex-group">
+            <span class="cs-topper">Dal 1956, l'energia che ti muove</span>
+            <h1 class="cs-title">GPL, l'energia pulita che arriva ovunque</h1>
+            <p class="cs-text">
+              FuelPoint è il partner affidabile per la distribuzione di GPL, carburanti
+              e servizi energetici per privati, professionisti e aziende in tutta Italia.
+            </p>
+            <div class="cs-button-group">
+              <a href="#servizi-triplet" class="cs-button-solid">Combustibili</a>
+              <a href="#card-features" class="cs-button-transparent">Carburanti</a>
+            </div>
+          </div>
+        </div>
+        <picture class="cs-background">
+          <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=750&h=1000&fit=crop" />
+          <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop" />
+          <img
+            loading="eager"
+            decoding="async"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
+            alt="stazione di servizio GPL con paesaggio italiano"
+            width="1920"
+            height="1080"
+            aria-hidden="true"
+          />
+        </picture>
+      </section>
+
+      <!-- 03 - CARD FEATURES | CS: Services -> 2 Card -->
+      <section id="cs-services-1736">
+        <div class="cs-container">
+
+          <!-- Intestazione sezione -->
+          <div class="cs-content">
+            <span class="cs-topper">Soluzioni per te</span>
+            <h2 class="cs-title">Carburanti e servizi per ogni esigenza</h2>
+          </div>
+
+          <ul class="cs-card-group" role="list">
+
+            <!-- Card 1: FuelPoint Card -->
+            <li class="cs-item cs-item--card">
+              <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" />
+                <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop" />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop"
+                  alt="FuelPoint Card fedeltà carburanti"
+                  width="800"
+                  height="500"
+                />
+              </picture>
+              <div class="cs-info">
+                <span class="cs-topper">Per te, ogni giorno</span>
+                <h3 class="cs-h3">La FuelPoint Card</h3>
+                <p class="cs-item-text">Fai rifornimento di benzina, diesel e GPL ovunque tu sia. La carta fedeltà FuelPoint ti premia ad ogni litro — per auto, moto e mezzi pesanti.</p>
+                <ul class="cs-icon-group" role="list" aria-label="Veicoli compatibili">
+                  <li class="cs-icon-li">
+                    <svg class="cs-icon" viewBox="0 0 32 20" fill="currentColor" aria-hidden="true">
+                      <path d="M5 12 L8 4 H24 L27 12 H5Z M2 12 H30 V17 H2Z"/>
+                      <circle cx="8" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                      <circle cx="24" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Auto</span>
+                  </li>
+                  <li class="cs-icon-li">
+                    <svg class="cs-icon" viewBox="0 0 32 22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <circle cx="7" cy="19" r="3"/>
+                      <circle cx="25" cy="19" r="3"/>
+                      <path d="M10 19 L14 9 L22 9 M18 9 L22 5 L26 5 M22 9 L25 16"/>
+                    </svg>
+                    <span>Moto</span>
+                  </li>
+                  <li class="cs-icon-li">
+                    <svg class="cs-icon" viewBox="0 0 36 22" fill="currentColor" aria-hidden="true">
+                      <rect x="1" y="7" width="22" height="12" rx="1"/>
+                      <path d="M23 11 L31 13 V19 H23Z"/>
+                      <circle cx="7" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                      <circle cx="17" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                      <circle cx="28" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Camion</span>
+                  </li>
+                </ul>
+                <a href="#" class="cs-button-solid">Richiedi la card</a>
+              </div>
+            </li>
+
+            <!-- Card 2: Stazioni di servizio -->
+            <li class="cs-item cs-item--stations">
+              <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1545262810-a9b64b3e00ed?w=600&h=400&fit=crop" />
+                <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1545262810-a9b64b3e00ed?w=800&h=500&fit=crop" />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://images.unsplash.com/photo-1545262810-a9b64b3e00ed?w=800&h=500&fit=crop"
+                  alt="Stazione di servizio FuelPoint"
+                  width="800"
+                  height="500"
+                />
+              </picture>
+              <div class="cs-info">
+                <span class="cs-topper">La rete più capillare</span>
+                <h3 class="cs-h3">Stazioni di servizio</h3>
+                <p class="cs-item-text">Oltre 500 punti vendita distribuiti in tutta Italia. Benzina, diesel, GPL e AdBlue disponibili 24 ore su 24, 7 giorni su 7.</p>
+                <ul class="cs-icon-group" role="list" aria-label="Carburanti disponibili">
+                  <li class="cs-icon-li">
+                    <svg class="cs-icon" viewBox="0 0 20 28" fill="currentColor" aria-hidden="true">
+                      <path d="M10 2 C10 2 2 12 2 18 A8 8 0 0 0 18 18 C18 12 10 2 10 2Z"/>
+                    </svg>
+                    <span>Benzina</span>
+                  </li>
+                  <li class="cs-icon-li">
+                    <svg class="cs-icon" viewBox="0 0 20 28" fill="currentColor" aria-hidden="true">
+                      <path d="M10 2 C10 2 2 12 2 18 A8 8 0 0 0 18 18 C18 12 10 2 10 2Z"/>
+                      <path d="M7 18 L10 14 L13 18" fill="var(--white)" stroke="none"/>
+                    </svg>
+                    <span>Diesel</span>
+                  </li>
+                  <li class="cs-icon-li">
+                    <svg class="cs-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="3" y="6" width="14" height="14" rx="2"/>
+                      <path d="M17 10 L21 10 L21 17 L17 17"/>
+                      <circle cx="10" cy="13" r="3"/>
+                    </svg>
+                    <span>GPL</span>
+                  </li>
+                </ul>
+                <a href="#card-features" class="cs-button-solid">Trova stazione</a>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- 04 - SOCIETA BENEFIT | CS: Side By Side -> Reverse -->
+      <section id="societa-benefit">
+      </section>
+
+      <!-- 05 - GPL ENERGIA | CS: Content Flair -->
+      <section id="gpl-energia">
+      </section>
+
+      <!-- 06 - SERVIZI TRIPLET | CS: Services -> 3 Card -->
+      <section id="servizi-triplet">
+      </section>
+
+      <!-- 07 - DEVRA ENERGIA | CS: Side By Side -> Reverse -->
+      <section id="devra-energia">
+      </section>
+
+      <!-- 08 - LAVORA CON NOI | CS: Side By Side -> Standard -->
+      <section id="lavora-con-noi">
+      </section>
+
+      <!-- 09 - ASSISTENZA | CS: Services -> 4 Card / Contact -->
+      <section id="assistenza">
+      </section>
+
+      <!-- 10 - NEWS | CS: Blog -> 2 Card -->
+      <section id="news">
+      </section>
+
+      <!-- 11 - MONDO FUELPOINT | CS: CTA -> Standard -->
+      <section id="mondo-fuelpoint">
+      </section>
+
+    </main>
+
+    <!-- 12 - FOOTER | CS: Footer -> Multi Column -->
+    <footer id="cs-footer">
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
