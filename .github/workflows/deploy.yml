@@ -28,14 +28,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: npm install
+        # Rimuove il package-lock.json generato su macOS: evita il bug
+        # "@rollup/rollup-linux-x64-gnu not found" causato dal mismatch
+        # tra binari nativi Rollup per piattaforma diversa nel lockfile.
+        run: |
+          rm -f package-lock.json
+          npm install
 
       - name: Build
         # Passa la base URL dinamica (es. /repo-name/) da GitHub Pages
