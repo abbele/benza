@@ -430,7 +430,297 @@ img {
 }
 
 /* =============================================
+   02+03 - HERO + CARD FEATURES | #cs-hero-1619
+   CS Stitch 1619 — sezione combinata (hero + card strip)
+   Fix viewport: min-height: 100dvh (dynamic, non svh)
+   ============================================= */
+
+#cs-hero-1619 {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  /* offset nav fissa — mobile: 3.75rem */
+  padding-top: 3.75rem;
+}
+
+/* Dark gradient overlay */
+#cs-hero-1619::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.48) 55%,
+    rgba(0, 0, 0, 0.62) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Container flex column: content in alto, card strip in basso */
+#cs-hero-1619 .cs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 5rem) 1rem clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero content — occupa lo spazio disponibile, spinge le card in basso */
+#cs-hero-1619 .cs-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 42rem;
+  padding-bottom: 3rem;
+}
+
+#cs-hero-1619 .cs-topper {
+  color: var(--accent);
+}
+
+#cs-hero-1619 .cs-title {
+  font-size: clamp(2rem, 5vw, 3.8125rem);
+  font-weight: 900;
+  line-height: 1.2em;
+  color: var(--white);
+  max-width: unset;
+}
+
+#cs-hero-1619 .cs-text {
+  color: var(--bodyTextColorWhite);
+  opacity: 0.9;
+  max-width: 36rem;
+}
+
+#cs-hero-1619 .cs-button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Outline/transparent button — non presente in CS nativo */
+#cs-hero-1619 .cs-button-transparent {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-decoration: none;
+  text-align: center;
+  min-width: 9.375rem;
+  padding: 0 1.5rem;
+  color: var(--white);
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 0.25rem;
+  display: inline-block;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+#cs-hero-1619 .cs-button-transparent:hover {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+/* Card strip — ancorate in basso al fondo della sezione hero */
+#cs-hero-1619 .cs-card-group {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* Singola card */
+#cs-hero-1619 .cs-item {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid var(--primary);
+}
+
+#cs-hero-1619 .cs-item--alt {
+  border-top-color: var(--secondary);
+}
+
+/* Immagine card */
+#cs-hero-1619 .cs-picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#cs-hero-1619 .cs-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+#cs-hero-1619 .cs-item:hover .cs-picture img {
+  transform: scale(1.04);
+}
+
+/* Contenuto testo card */
+#cs-hero-1619 .cs-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  flex: 1;
+}
+
+#cs-hero-1619 .cs-item--alt .cs-topper {
+  color: var(--secondary);
+}
+
+#cs-hero-1619 .cs-h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  font-weight: 900;
+  line-height: 1.2em;
+  color: var(--dark);
+  margin: 0;
+}
+
+#cs-hero-1619 .cs-item-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.6em;
+  color: var(--bodyTextColor);
+  flex: 1;
+}
+
+/* Gruppo icone — CUSTOM (non in CS nativo) */
+#cs-hero-1619 .cs-icon-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+#cs-hero-1619 .cs-icon-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+#cs-hero-1619 .cs-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+
+#cs-hero-1619 .cs-item--alt .cs-icon {
+  color: var(--secondary);
+}
+
+#cs-hero-1619 .cs-icon-li span {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--bodyTextColor);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#cs-hero-1619 .cs-info .cs-button-solid {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Variante secondaria bottone (card alt) */
+#cs-hero-1619 .cs-button-alt {
+  background-color: var(--secondary);
+}
+
+#cs-hero-1619 .cs-button-alt:hover {
+  background-color: #002d82;
+}
+
+/* Background image full-bleed — pattern CodeStitch standard */
+#cs-hero-1619 .cs-background {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#cs-hero-1619 .cs-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* TABLET */
+@media only screen and (min-width: 48rem) {
+  #cs-hero-1619 {
+    padding-top: 5rem;
+  }
+
+  #cs-hero-1619 .cs-card-group {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #cs-hero-1619 .cs-picture {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 64rem) {
+  #cs-hero-1619 .cs-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #cs-hero-1619 .cs-content {
+    max-width: 50rem;
+  }
+
+  #cs-hero-1619::before {
+    background: linear-gradient(
+      105deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.5) 55%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+
+  #cs-hero-1619 .cs-info {
+    padding: 2rem;
+  }
+}
+
+/* =============================================
    02 - HERO | #cs-hero-571
+   Usato in: /index.html (approccio sezioni separate)
    ============================================= */
 
 #cs-hero-571 {
@@ -443,7 +733,6 @@ img {
   overflow: hidden;
 }
 
-/* Dark gradient overlay */
 #cs-hero-571::before {
   content: '';
   width: 100%;
@@ -496,7 +785,6 @@ img {
   flex-wrap: wrap;
 }
 
-/* Outline/transparent button — non presente in CS nativo */
 #cs-hero-571 .cs-button-transparent {
   font-size: 1rem;
   font-weight: 700;
@@ -518,7 +806,6 @@ img {
   color: var(--dark);
 }
 
-/* Background image — pattern CodeStitch standard */
 #cs-hero-571 .cs-background {
   width: 100%;
   height: 100%;
@@ -538,20 +825,17 @@ img {
   object-position: center;
 }
 
-/* TABLET */
 @media only screen and (min-width: 48rem) {
   #cs-hero-571 {
     padding: clamp(10rem, 20vw, 14rem) 1rem;
   }
 }
 
-/* DESKTOP */
 @media only screen and (min-width: 64rem) {
   #cs-hero-571 .cs-flex-group {
     max-width: 50rem;
   }
 
-  /* Gradient direzionale su desktop: schiacciato a sinistra */
   #cs-hero-571::before {
     background: linear-gradient(
       105deg,
@@ -564,6 +848,7 @@ img {
 
 /* =============================================
    03 - CARD FEATURES | #cs-services-1736
+   Usato in: /index.html (approccio sezioni separate)
    ============================================= */
 
 #cs-services-1736 {
@@ -575,28 +860,8 @@ img {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
 }
 
-/* Intestazione centrata — pattern CS standard */
-#cs-services-1736 .cs-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
-}
-
-#cs-services-1736 .cs-title {
-  text-align: center;
-  margin: 0 auto;
-}
-
-/* Grid 2 card — mobile: colonna singola */
 #cs-services-1736 .cs-card-group {
   width: 100%;
   padding: 0;
@@ -607,7 +872,6 @@ img {
   gap: 2rem;
 }
 
-/* Singola card */
 #cs-services-1736 .cs-item {
   background-color: var(--white);
   border-radius: 0.5rem;
@@ -617,7 +881,6 @@ img {
   flex-direction: column;
 }
 
-/* Immagine card — aspect ratio fisso, object-fit cover */
 #cs-services-1736 .cs-picture {
   display: block;
   width: 100%;
@@ -639,7 +902,6 @@ img {
   transform: scale(1.04);
 }
 
-/* Contenuto testo */
 #cs-services-1736 .cs-info {
   padding: 2rem 1.5rem;
   display: flex;
@@ -648,7 +910,6 @@ img {
   flex: 1;
 }
 
-/* Accento colore sul bordo superiore — differenzia le due card */
 #cs-services-1736 .cs-item--card {
   border-top: 4px solid var(--primary);
 }
@@ -676,7 +937,6 @@ img {
   flex: 1;
 }
 
-/* Gruppo icone veicoli/carburanti — CUSTOM (non in CS nativo) */
 #cs-services-1736 .cs-icon-group {
   list-style: none;
   padding: 0;
@@ -711,20 +971,19 @@ img {
   letter-spacing: 0.05em;
 }
 
-#cs-services-1736 .cs-button-solid {
+#cs-services-1736 .cs-info .cs-button-solid {
   align-self: flex-start;
   margin-top: auto;
 }
 
-#cs-services-1736 .cs-item--stations .cs-button-solid {
+#cs-services-1736 .cs-button-stations {
   background-color: var(--secondary);
 }
 
-#cs-services-1736 .cs-item--stations .cs-button-solid:hover {
+#cs-services-1736 .cs-button-stations:hover {
   background-color: #002d82;
 }
 
-/* TABLET */
 @media only screen and (min-width: 48rem) {
   #cs-services-1736 .cs-card-group {
     grid-template-columns: 1fr 1fr;
@@ -735,7 +994,6 @@ img {
   }
 }
 
-/* DESKTOP */
 @media only screen and (min-width: 64rem) {
   #cs-services-1736 .cs-info {
     padding: 2.5rem 2rem;

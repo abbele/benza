@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="FuelPoint x CodeStitch - Stress test homepage replica" />
-    <title>FuelPoint - GPL, energia pulita che arriva ovunque</title>
+    <meta name="description" content="FuelPoint x CodeStitch - Stitch 1619 (Hero + Cards combined)" />
+    <title>FuelPoint — Stitch 1619 (Hero + Card combined)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
@@ -113,10 +113,12 @@
 
     <main id="main">
 
-      <!-- 02 - HERO | CS: Hero Section -> Left Aligned -->
-      <section id="cs-hero-571">
+      <!-- 02+03 - HERO + CARD FEATURES | CS: Stitch 1619 (Hero + Cards combined) -->
+      <section id="cs-hero-1619">
         <div class="cs-container">
-          <div class="cs-flex-group">
+
+          <!-- Hero content -->
+          <div class="cs-content">
             <span class="cs-topper">Dal 1956, l'energia che ti muove</span>
             <h1 class="cs-title">GPL, l'energia pulita che arriva ovunque</h1>
             <p class="cs-text">
@@ -128,30 +130,12 @@
               <a href="#" class="cs-button-transparent">Carburanti</a>
             </div>
           </div>
-        </div>
 
-        <picture class="cs-background">
-          <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=750&h=1300&fit=crop" />
-          <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop" />
-          <img
-            loading="eager"
-            decoding="async"
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
-            alt="stazione di servizio GPL con paesaggio italiano"
-            width="1920"
-            height="1080"
-            aria-hidden="true"
-          />
-        </picture>
-      </section>
-
-      <!-- 03 - CARD FEATURES | CS: Services -> 2 Card -->
-      <section id="cs-services-1736">
-        <div class="cs-container">
+          <!-- Card strip — in fondo alla viewport, su sfondo hero -->
           <ul class="cs-card-group" role="list">
 
             <!-- Card 1: FuelPoint Card -->
-            <li class="cs-item cs-item--card">
+            <li class="cs-item">
               <picture class="cs-picture">
                 <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" />
                 <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop" />
@@ -200,7 +184,7 @@
             </li>
 
             <!-- Card 2: Stazioni di servizio -->
-            <li class="cs-item cs-item--stations">
+            <li class="cs-item cs-item--alt">
               <picture class="cs-picture">
                 <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1545262810-a9b64b3e00ed?w=600&h=400&fit=crop" />
                 <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1545262810-a9b64b3e00ed?w=800&h=500&fit=crop" />
@@ -240,51 +224,30 @@
                     <span>GPL</span>
                   </li>
                 </ul>
-                <a href="#" class="cs-button-solid cs-button-stations">Trova stazione</a>
+                <a href="#" class="cs-button-solid cs-button-alt">Trova stazione</a>
               </div>
             </li>
 
           </ul>
         </div>
-      </section>
 
-      <!-- 04 - SOCIETA BENEFIT | CS: Side By Side -> Reverse -->
-      <section id="societa-benefit">
-      </section>
-
-      <!-- 05 - GPL ENERGIA | CS: Content Flair -->
-      <section id="gpl-energia">
-      </section>
-
-      <!-- 06 - SERVIZI TRIPLET | CS: Services -> 3 Card -->
-      <section id="servizi-triplet">
-      </section>
-
-      <!-- 07 - DEVRA ENERGIA | CS: Side By Side -> Reverse -->
-      <section id="devra-energia">
-      </section>
-
-      <!-- 08 - LAVORA CON NOI | CS: Side By Side -> Standard -->
-      <section id="lavora-con-noi">
-      </section>
-
-      <!-- 09 - ASSISTENZA | CS: Services -> 4 Card / Contact -->
-      <section id="assistenza">
-      </section>
-
-      <!-- 10 - NEWS | CS: Blog -> 2 Card -->
-      <section id="news">
-      </section>
-
-      <!-- 11 - MONDO FUELPOINT | CS: CTA -> Standard -->
-      <section id="mondo-fuelpoint">
+        <!-- Background image full-bleed — pattern CS nativo -->
+        <picture class="cs-background">
+          <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=750&h=1300&fit=crop" />
+          <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop" />
+          <img
+            loading="eager"
+            decoding="async"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
+            alt="stazione di servizio GPL con paesaggio italiano"
+            width="1920"
+            height="1080"
+            aria-hidden="true"
+          />
+        </picture>
       </section>
 
     </main>
-
-    <!-- 12 - FOOTER | CS: Footer -> Multi Column -->
-    <footer id="cs-footer">
-    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>

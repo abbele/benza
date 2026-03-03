@@ -38,7 +38,9 @@ npm run preview  # anteprima della build
 
 ```
 /
-├── index.html                  # Entry point — assembla tutte le sezioni
+├── index.html                  # Entry point principale — sezioni separate (571 + 1736)
+├── custom/
+│   └── index.html              # Variante stitch 1619 — hero + card in sezione unica
 ├── package.json
 ├── CLAUDE.md                   # Istruzioni progetto per Claude Code
 ├── README.md                   # Questo file
@@ -55,8 +57,20 @@ npm run preview  # anteprima della build
 └── reports/                    # Analisi per sezione
     ├── 01-navigation-report.md
     ├── 02-hero-report.md
-    └── 03-card-features-report.md
+    ├── 03-card-features-report.md
+    └── 02+03-hero-card-combined-report.md  # Refactor stitch 1619
 ```
+
+### Due varianti a confronto
+
+Il progetto mantiene due approcci per le sezioni hero + card features, accessibili come pagine separate durante il dev:
+
+| URL | Approccio | Stitch |
+|---|---|---|
+| `http://localhost:5173/` | Sezioni separate: hero (`#cs-hero-571`) + card (`#cs-services-1736`) | Hero Left Aligned + Services 2 Card |
+| `http://localhost:5173/custom/` | Sezione unica combinata (`#cs-hero-1619`) — hero full-viewport con card strip in fondo | Stitch 1619 |
+
+**Differenza principale**: la variante `/custom` usa `min-height: 100dvh` e un layout flex colonna che ancora le card in fondo alla viewport, con l'immagine hero che fa da sfondo a entrambi (hero text + card). Più fedele al sito di riferimento. La variante principale (`/`) mantiene le due sezioni distinte per confronto e per documentare i gap dei singoli stitch.
 
 ---
 
@@ -100,6 +114,7 @@ Ogni sezione segue lo stesso workflow:
 | 01 | Navigation + Dropdown | Navigation > With Dropdown | 3.25/5 | [→](reports/01-navigation-report.md) |
 | 02 | Hero full-bleed | Hero > Left Aligned | 4.2/5 | [→](reports/02-hero-report.md) |
 | 03 | Card Features (2 card) | Services > 2 Card | 3.4/5 | [→](reports/03-card-features-report.md) |
+| 02+03 | Hero + Card combinati (`/custom`) | Stitch 1619 | 3.9/5 | [→](reports/02+03-hero-card-combined-report.md) |
 | 04 | Società Benefit | Side By Side > Reverse | — | da fare |
 | 05 | GPL Energia | Content Flair | — | da fare |
 | 06 | Servizi Triplet | Services > 3 Card | — | da fare |
